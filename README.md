@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Isopod
 
 <h1>Isopod Hardware</h1>
@@ -14,3 +15,6 @@
 <h1>Test isopod</h1>
 >>>>>>> sw
 
+=======
+<h1> MODEL BOX </h1>
+>>>>>>> hw
