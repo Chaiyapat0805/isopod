@@ -1,4 +1,4 @@
-# isopod
+# Isopod
 
 <h1>Isopod</h1>
 
