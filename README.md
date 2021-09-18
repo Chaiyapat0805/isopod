@@ -1,7 +1,7 @@
 # Isopod
 
 <h1>Isopod Hardware</h1>
-<p>อุปกรณ์ตัวกล่องวัดอุณหภูมิ</p>
+<h3>อุปกรณ์ตัวกล่องวัดอุณหภูมิ</h3>
 <p>Relay 5V 1Channel</p>
 <img src="ref/Relay.jpg" width="300" height="300">
 <p>ขนาด 50*25 mm.</p>
