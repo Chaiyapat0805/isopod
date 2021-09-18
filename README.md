@@ -1,5 +1,3 @@
-# Isopod
-
 <h1>Isopod Hardware</h1>
 <h3>อุปกรณ์ตัวกล่องวัดอุณหภูมิ</h3>
 <p>Relay 5V 1Channel<p>
@@ -26,13 +24,28 @@
 <img src="ref/60181231.jpg" width="350">
 <p>ขนาด 5/7 mm.<p>
 <a href="shorturl.asia/g2JtE">Click here</a>
-<h3> Model งาน</h3>
-<p>ตัวอย่างการสร้างกล่องใส่อุปกรณ์<p>
-
-
-
-<h1>Isopod Software</h1>
-
-<h1>Isopod UXUI</h1>
-
-<h1>Isopod App</h1>
+<h3> Model example</h3>
+<p>ตัวอย่างการสร้างกล่องSwitching power supply<p>
+<p>ภาพรวมชิ้นงานตอนประกอบ<p>  
+<img src="ref/DESIGN FUSION.JPG" width="850">  
+<p>ภาพรวมชิ้นงานด้านซ้าย<p>  
+<img src="ref/DESIGN LEFT.JPG" width="850">   
+<p>ภาพรวมชิ้นงานด้านหน้า<p>    
+<img src="ref/DESIGN FONT.JPG" width="850">  
+<h3>Resolution</h3> 
+<p>RESOLUTION BODY<p>
+<img src="ref/RESOLUTION BODY.JPG" width="850">   
+<p>ขนาด 163*103 mm.<p>
+<p>RESOLUTION BODY1<p>
+<img src="ref/RESOLUTION BODY1.JPG" width="850"> 
+<p>ขนาด 159*99 mm.<p>  
+<p>RESOLUTION TOP<p>  
+<img src="ref/RESOLUTION TOP.JPG" width="850"> 
+<p>ขนาด 163*103 159*99 mm.<p>  
+<p>ตัวอย่างการสร้างกล่องใส่อุปกรณ์<p>  
+<p>ภาพรวมชิ้นงานตอนประกอบ<p> 
+<img src="ref/BoxHw_all.png" width="850">   
+<img src="ref/BoxHw_F.png" width="850">  
+<img src="ref/BoxHw_Bot.png" width="850">  
+  
+  
