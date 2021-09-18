@@ -2,7 +2,7 @@
 
 <h1>Isopod Hardware</h1>
 <p>อุปกรณ์ตัวกล่องวัดอุณหภูมิ</p>
-<p>Relay 1ช่อง 5V</p>
+<p>Relay 5V 1Channel</p>
 <img src="ref/Relay.jpg" width="300" height="300">
 <p>ขนาด 50*25 mm.</p>
 <p>DHT22 โมดูลวัดอุณหภูมิและความชื้น</p>
