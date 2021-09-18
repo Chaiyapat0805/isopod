@@ -26,8 +26,7 @@
 <img src="ref/60181231.jpg" width="350">
 <p>ขนาด 5/7 mm.<p>
 <a href="shorturl.asia/g2JtE">Click here</a>
-<h3> Model งาน</h3>
-<p>ตัวอย่างการสร้างกล่องใส่อุปกรณ์<p>
+
 
 
 
