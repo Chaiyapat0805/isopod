@@ -6,6 +6,7 @@
 <a href="https://shopee.co.th/%E0%B8%81%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%9F%E0%B8%A1-Box-C-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-49.8*70.5*35.2-cm(%E0%B8%A3%E0%B8%9A%E0%B8%81%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%AD%E0%B8%B5%E0%B8%A2%E0%B8%94)-i.43007997.2737582565">Click here</a>  
 <p>FAN x2<p>  
 <img src="ref/FANx2.JPG" width="350">  
+<p>ขนาด 12 cm.<p>  
 <a href="https://shopee.co.th/NUBWO-%E0%B8%9E%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%84%E0%B8%AA-FAN-CASE-12cm-AIRFORCE-NFT-100-%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%81%E0%B8%94%E0%B8%87-%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%82%E0%B8%B2%E0%B8%A7-i.31526847.1207404212?position=32">Click here</a>  
 <p>Relay 5V 1Channel<p>
 <img src="ref/Relay.jpg" width="350">
@@ -17,7 +18,7 @@
 <a href="https://www.cybertice.com/product/697/dht22-am2302-module-%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B8%B7%E0%B9%89%E0%B8%99-temperature-and-humidity-sensor-module-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B9%84%E0%B8%9F">Click here</a>
 <p>ESP32 NodeMCU wifi<p>
 <img src="ref/esp32.jpg" width="350">
-<p>ขนาด5 50*27 mm.<p>
+<p>ขนาด 50*27 mm.<p>
 <a href="https://www.cybertice.com/product/1149/esp32-nodemcu-esp-wroom-32-wi-fi-and-bluetooth-module-dual-core-consumption?gclid=Cj0KCQjwnJaKBhDgARIsAHmvz6f2EW2hNV0SDm6gqHix8OR3cResC86y7AxX1qo4g25c2soJnG-7fEsaAizOEALw_wcB">Click here</a>
 <p>Switching Power supply 12V 10A</p>
 <img src="ref/w4.jpg" width="350">
