@@ -10,7 +10,7 @@
 <a href="https://shopee.co.th/NUBWO-%E0%B8%9E%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%84%E0%B8%AA-FAN-CASE-12cm-AIRFORCE-NFT-100-%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%81%E0%B8%94%E0%B8%87-%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%82%E0%B8%B2%E0%B8%A7-i.31526847.1207404212?position=32">Click here</a>  
 <p>โมดูลจอแสดงผล LCD<p> 
 <img src="ref/lcd.JPG" width="350">   
-<p>ขนาด 5.5x2.3x1.4cm.<p> 
+<p>ขนาด 5.5x2.3x1.4 cm.<p> 
 <a href="https://www.cybertice.com/product/897/1602-lcd-blue-screen-16x2-%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%AD%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%9C%E0%B8%A5-lcd-%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1-i2c-interface">Click here</a>    
 <p>Relay 5V 1Channel<p>
 <img src="ref/Relay.jpg" width="350">
