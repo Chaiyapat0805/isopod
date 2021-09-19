@@ -3,7 +3,7 @@
 <p>Relay 5V 1Channel<p>
 <img src="ref/Relay.jpg" width="350">
 <p>ขนาด 50*25 mm.<p>
-<a href="shorturl.asia/A7FET">Click here</a>
+<a href="https://www.cybertice.com/product/2872/%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94-relay-1%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87-5v-relay-module-5v-1-channel-isolation-high-and-low-trigger-250v-10a-2">Click here</a>
 <p>DHT22 โมดูลวัดอุณหภูมิและความชื้น<p>
 <img src="ref/DHT22.jpg" width="350">
 <p>ขนาด 40*15 mm.<p>
