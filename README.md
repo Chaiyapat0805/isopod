@@ -8,6 +8,7 @@
 <img src="ref/FANx2.JPG" width="350">  
 <p>ขนาด 12 cm.<p>  
 <a href="https://shopee.co.th/NUBWO-%E0%B8%9E%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%A1%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%84%E0%B8%AA-FAN-CASE-12cm-AIRFORCE-NFT-100-%E0%B8%A1%E0%B8%B5%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%81%E0%B8%94%E0%B8%87-%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%82%E0%B8%B2%E0%B8%A7-i.31526847.1207404212?position=32">Click here</a>  
+<p>โมดูลจอแสดงผล LCD<p>  
 <p>Relay 5V 1Channel<p>
 <img src="ref/Relay.jpg" width="350">
 <p>ขนาด 50*25 mm.<p>
