@@ -1,11 +1,16 @@
 #include "DHT.h"
-#include <ESP8266WiFi.h>
+#include "WiFi.h"
+#include <LiquidCrystal_I2C.h>
+#include <MySQL_Connection.h>
+#include <MySQL_Cursor.h>
 
 //connect wifi
 const char* ssid = "Username";
 const char* pass = "Password";
 
-#define DHTPIN 
+#define DHTPIN  //Pin ขาสำหรับ เสียบกับ Nodemcu
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);  //Module IIC/I2C Interface บางรุ่นอาจจะใช้ 0x3f
 
 //#define DHTTYPE DHT11   // DHT 11
 #define DHTTYPE DHT22   // DHT 22
@@ -14,7 +19,7 @@ DHT dht;
 
 void setup() {
   //check connect 
-  Serial.begin(9600); //
+  Serial.begin(115200); 
   WiFi.begin(ssid, pass); //ทำการ Connect SSID และ Pass
   
   while (WiFi.status() != WL_CONNECTED) { // ถ้าไม่สามารถเชื่อมต่อได้
@@ -28,6 +33,18 @@ void setup() {
   Serial.print("Wi-Fi connected."); 
   Serial.print("IP Address : ");
   Serial.println(WiFi.localIP());  // ทำการ Print IP ที่ได้รับมา 
+
+   //MySQL Connection
+  Serial.println("Connecting...");
+  if (conn.connect(server_addr, 3306, dbuser, dbpassword)) {
+    delay(1000);
+    Serial.println("MySQL Connected.");
+  }
+  else
+    Serial.println("Connection failed.");
+  //conn.close();
+  
+}
   
   // test
   Serial.begin(9600);
@@ -42,15 +59,26 @@ void setup() {
   digitalWrite( 1, LOW);
   digitalWrite( 2, LOW);
 
+  dht.begin();
+  lcd.begin();
+  lcd.backlight();
+
+
 }
 
 void loop() {
   
   Serial.printf("Connection Status: %d\n", WiFi.status());// แสดงสถานะการเชื่อมต่อ
-
+  
   delay(dht.getMinimumSamplingPeriod());
   float humidity = dht.getHumidity(); // ดึงค่าความชื้น
   float temperature = dht.getTemperature(); // ดึงค่าอุณหภูมิ
+
+    if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+  
   Serial.print(dht.getStatusString());
   Serial.print("\t");
   Serial.print(humidity, 1);
@@ -58,8 +86,7 @@ void loop() {
   Serial.print(temperature, 1);
   Serial.print("\t\t");
   Serial.println(dht.toFahrenheit(temperature), 1);
-  delay(1000);
-
+  
   if ( temperature <= 30 ) {
   digitalWrite(1 , LOW);
   digitalWrite(2, LOW);
@@ -77,6 +104,15 @@ void loop() {
   digitalWrite(1 , LOW);
   digitalWrite(2, HIGH);
   }
+  
+  lcd.home();
+  lcd.print("Temp : ");
+  lcd.print(t);
+  lcd.setCursor(0, 1);
+  lcd.print("Humidity : ");
+  lcd.print(t);
+  lcd.print("%");
+
 
 
 }
