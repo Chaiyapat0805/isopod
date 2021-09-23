@@ -56,8 +56,21 @@
 <p>ขนาด 163*103 159*99 mm.<p>  
 <p>ตัวอย่างการสร้างกล่องใส่อุปกรณ์<p>  
 <p>ภาพรวมชิ้นงานตอนประกอบ<p> 
-<img src="ref/BoxHw_all.png" width="850">   
-<img src="ref/BoxHw_F.png" width="850">  
+<p>ภาพกล่องใส่อุปกรณ์โดยรวม<p>
+<img src="ref/BoxHw_all.png" width="850">
+<p>ด้านหน้ากล่อง<p>
+<img src="ref/BoxHw_F.png" width="850">
+<p>ด้านล่างกล่อง<p>
 <img src="ref/BoxHw_Bot.png" width="850">  
-  
-  
+
+<h3>Resolution</h3> 
+<p>RESOLUTION BODY<p>
+<img src="ref/Resolution3.png" width="850">
+<p>ขนาด 90*90 mm.<p> 
+<img src="ref/Resolution4.png" width="850">
+<p>ขนาด 90*90 86*86 mm.<p> 
+<p>RESOLUTION TOP<p>
+<img src="ref/Resolution1.png" width="850">
+<p>ขนาด 90*90 mm.<p> 
+<img src="ref/Resolution2.png" width="850">
+<p>ขนาด 90*90 85*81 mm.<p> 
