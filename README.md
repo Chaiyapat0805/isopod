@@ -74,3 +74,8 @@
 <p>ขนาด 90*90 mm.<p> 
 <img src="ref/Resolution2.png" width="850">
 <p>ขนาด 90*90 85*81 mm.<p> 
+ 
+<h3>BOX PRODUCT</h3>
+<img src="ref/BOXPRODUCT.JPG" width="850">
+<p>ขนาด 710*510*353 mm.<p>
+  
