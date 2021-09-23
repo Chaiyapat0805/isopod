@@ -78,4 +78,4 @@
 <h3>BOX PRODUCT</h3>
 <img src="ref/PRODUCTBOX.JPG" width="850">
 <p>ขนาด 710*510*353 mm.<p>
-  
+<p> ขนาดรูพ่นหมอก 5 mm.<p>  
