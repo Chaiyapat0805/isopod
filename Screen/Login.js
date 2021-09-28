@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert} from "react-native";
 
-export const Login = (navigation) => {
+export function Login({ navigation }) {
 
     return(
 
@@ -25,10 +25,10 @@ export const Login = (navigation) => {
                 </View>
 
                 <View style={styles.button}>
-                    <TouchableOpacity style={styles.buttonRt} onPress={() => Alert.alert('Touch')} >
+                    <TouchableOpacity style={styles.buttonRt} onPress={() => navigation.navigate('Register')} >
                         <Text style={styles.textbt}> Register </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonLi} onPress={() => Alert.alert('Touch')} >
+                    <TouchableOpacity style={styles.buttonLi} onPress={() => navigation.navigate('Homepage')} >
                         <Text style={styles.textbt}> Log in </Text>
                     </TouchableOpacity>
                 </View>
@@ -36,7 +36,7 @@ export const Login = (navigation) => {
         </ImageBackground>
 
     )
-};
+}
 
 const styles = StyleSheet.create({
     container: {

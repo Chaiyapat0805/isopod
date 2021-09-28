@@ -1,23 +1,47 @@
-import React, { Component } from 'react';
-import {View} from 'react-native';
-import Login from './Screen/Login';
-import Register from './Screen/Register';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
+import  Login  from "./Screen/Login"
+import  Register  from "./Screen/Register"
+import  Homepage from "./Screen/Homepage"
+import  Profile from "./Screen/Profile"
 
-  render() {
-    return (
-      <View>
-        <Login />
-        {/* <Register /> */}
-      </View>
-    );
-  }
+const HS = createStackNavigator();
+
+function HomeScreen () {
+
+    return(
+
+      <NavigationContainer independent={true} > 
+
+        <HS.Navigator>
+
+            <HS.Screen name="HOME" component={Login} options={{ headerShown: false }}/>
+            
+            <HS.Screen name="Register" component={Register} options={{ headerShown: false }}/>
+
+            <HS.Screen name="Homepage" component={Homepage} options={{ headerShown: false }}/>
+
+            <HS.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
+
+        </HS.Navigator>
+
+      </NavigationContainer>
+    )
+
+}
+
+const App = () => {
+
+    return(
+
+      <NavigationContainer>
+        <HomeScreen />
+      </NavigationContainer>
+      
+    )
+
 }
 
 export default App;

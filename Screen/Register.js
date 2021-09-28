@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert} from "react-native";
 
-export function Register() {
+export function Register({ navigation }) {
 
     return(
         <ImageBackground source={require('../imge/background.png')} style={styles.imagebg}>
@@ -45,10 +45,10 @@ export function Register() {
                 </View>
 
                 <View style={styles.button}>
-                    <TouchableOpacity style={styles.buttonRt} onPress={() => Alert.alert('Touch')} >
+                    <TouchableOpacity style={styles.buttonRt} onPress={() => Alert.alert('สมัครสมาชิก สำเร็จ')} >
                         <Text style={styles.textbt}> Sign Up </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonLi} onPress={() => Alert.alert('Touch')} >
+                    <TouchableOpacity style={styles.buttonLi} onPress={() => navigation.navigate('HOME')} >
                         <Text style={styles.textbt}> Back </Text>
                     </TouchableOpacity>
                 </View>
