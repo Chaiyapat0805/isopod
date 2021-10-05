@@ -1,5 +1,7 @@
-# Isopod
+# isopod
+<h1>isopod App</h1>
 
+<<<<<<< HEAD
 <h1>Isopod Hardware</h1>
 <h3>อุปกรณ์ตัวกล่องวัดอุณหภูมิ</h3>
 <p>Relay 5V 1Channel<p>
@@ -36,3 +38,13 @@
 <h1>Isopod UXUI</h1>
 
 <h1>Isopod App</h1>
+=======
+<h3>โครงร่างจาก UXUI</h3>
+<img src="isopod/ref/uxui_li.png" width="400" height="550">
+<img src="isopod/ref/uxui_rg.png" width="400" height="550">
+<p></p>
+
+<h3>หน้า App</h3>
+<img src="isopod/ref/img_Li.png" width="400" height="550">
+<img src="isopod/ref/img_Rg.png" width="400" height="550">
+>>>>>>> 9c0d1de32756b794115ba96883ee6228fed72768
