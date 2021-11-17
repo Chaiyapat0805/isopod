@@ -1,58 +1,58 @@
 import React from 'react';
-import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert} from "react-native";
+import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert } from "react-native";
 
 export function Register({ navigation }) {
 
-    return(
+    return (
         <ImageBackground source={require('../imge/background.png')} style={styles.imagebg}>
 
-                <Text style={styles.textheader}> Sign Up </Text>
+            <Text style={styles.textheader}> Sign Up </Text>
 
-                <View style={styles.Container}>
-                    <Text style={styles.text}> Username : </Text>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Enter Username' 
-                    />
+            <View style={styles.Container}>
+                <Text style={styles.text}> Username :</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder='Enter Username'
+                />
 
-                    <Text style={styles.text}> Password : </Text>
-                    <TextInput
-                        style={styles.input}
-                        keyboardType='numeric'
-                        placeholder='Enter Password' 
-                    />
+                <Text style={styles.text}> Password : </Text>
+                <TextInput
+                    style={styles.input}
+                    keyboardType='number-pad'
+                    placeholder='Enter Password'
+                />
 
-                    <Text style={styles.text}> YourName : </Text>
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Enter YourName' 
-                    />
+                <Text style={styles.text}> YourName : </Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder='Enter YourName'
+                />
 
-                    <Text style={styles.text}> Email : </Text>
-                    <TextInput
-                        style={styles.input}
-                        keyboardType='email-address'
-                        placeholder='Enter Email' 
-                    />
+                <Text style={styles.text}> Email : </Text>
+                <TextInput
+                    style={styles.input}
+                    keyboardType='email-address'
+                    placeholder='Enter Email'
+                />
 
-                    <Text style={styles.text}> Phone number : </Text>
-                    <TextInput
-                        style={styles.input}
-                        keyboardType='numeric'
-                        placeholder='Enter Phone number' 
-                    />
+                <Text style={styles.text}> Phone number : </Text>
+                <TextInput
+                    style={styles.input}
+                    keyboardType='numeric'
+                    placeholder='Enter Phone number'
+                />
 
-                </View>
+            </View>
 
-                <View style={styles.button}>
-                    <TouchableOpacity style={styles.buttonRt} onPress={() => Alert.alert('สมัครสมาชิก สำเร็จ')} >
-                        <Text style={styles.textbt}> Sign Up </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonLi} onPress={() => navigation.navigate('HOME')} >
-                        <Text style={styles.textbt}> Back </Text>
-                    </TouchableOpacity>
-                </View>
-  
+            <View style={styles.button}>
+                <TouchableOpacity style={styles.buttonRt} onPress={() => Alert.alert('สมัครสมาชิก สำเร็จ')} >
+                    <Text style={styles.textbt}> Sign Up </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonLi} onPress={() => navigation.navigate('HOME')} >
+                    <Text style={styles.textbt}> Back </Text>
+                </TouchableOpacity>
+            </View>
+
         </ImageBackground>
     )
 }
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         top: -40,
         margin: 40,
-        marginTop: 5 
+        marginTop: 5
     },
     buttonRt: {
         backgroundColor: '#DDDDDD',

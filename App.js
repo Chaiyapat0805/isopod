@@ -13,6 +13,17 @@ import DairyCow from "./Screen/DairyCow"
 import GiantOrange from './Screen/GiantOrange';
 import Amber from './Screen/Amber';
 import PandaKing from './Screen/PandaKing';
+import Monitor from './Screen/Monitor';
+import Isocare from './Screen/Isocare';
+import Isocare2 from './Screen/Isocare2';
+import Isobox1 from './Screen/Isobox1';
+import Isobox2 from './Screen/Isobox2';
+import Isobox3 from './Screen/Isobox3';
+import gallerys from './Screen/gallerys';
+import gallerysocare from './Screen/gallerysocare';
+import EditProfile from './Screen/EditProfile';
+import Monitor2 from './Screen/Monitor2';
+import { Monitorchart } from './Screen/Monitorchart';
 
 const HS = createStackNavigator();
 
@@ -30,7 +41,7 @@ function HomeScreen() {
 
         <HS.Screen name="Homepage" component={Homepage} options={{ headerShown: false }} />
 
-        <HS.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+        <HS.Screen name='Profile' component={Profile} options={{ headerShown: false }} />
 
         <HS.Screen name="selecisopod" component={selecisopod} options={{ headerShown: false }} />
 
@@ -45,6 +56,28 @@ function HomeScreen() {
         <HS.Screen name="Amber" component={Amber} options={{ headerShown: false }} />
 
         <HS.Screen name="PandaKing" component={PandaKing} options={{ headerShown: false }} />
+
+        <HS.Screen name="Monitor" component={Monitor} options={{ headerShown: false }} />
+
+        <HS.Screen name="Isocare" component={Isocare} options={{ headerShown: false }} />
+
+        <HS.Screen name="Isocare2" component={Isocare2} options={{ headerShown: false }} />
+
+        <HS.Screen name="Isobox1" component={Isobox1} options={{ headerShown: false }} />
+
+        <HS.Screen name="Isobox2" component={Isobox2} options={{ headerShown: false }} />
+
+        <HS.Screen name="Isobox3" component={Isobox3} options={{ headerShown: false }} />
+
+        <HS.Screen name="gallerys" component={gallerys} />
+
+        <HS.Screen name="gallerysocare" component={gallerysocare} />
+
+        <HS.Screen name="EditProfile" component={EditProfile} options={{ headerShown: false }} />
+
+        <HS.Screen name="Monitor2" component={Monitor2} options={{ headerShown: false }} />
+
+        <HS.Screen name="Monitorchart" component={Monitorchart} options={{ headerShown: false }} />
 
       </HS.Navigator>
 

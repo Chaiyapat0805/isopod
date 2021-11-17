@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
-import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, Alert} from "react-native";
+import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
 
 export function Homepage({ navigation }) {
 
-    return(
+    return (
 
-            <View style={styles.container}>
+        <View style={styles.container}>
 
-                <Text style={styles.text}> HOME   PAGE </Text>
+            <Text style={styles.text}> HOME   PAGE </Text>
 
-                <Image source = {require('../imge/homepage/isopodhp.png')} style={styles.imagebg}/>
+            <Image source={require('../imge/homepage/isopodhp.png')} style={styles.imagebg} />
 
-                <View style={styles.button}>
-                    <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Profile')}  >
-                        <Image source = {require('../imge/homepage/icon1.png')} style={styles.imageicon}/>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('selecisopod')} >
-                        <Image source = {require('../imge/homepage/icon2.png')} style={styles.imageicon}/>
-                    </TouchableOpacity>
-                </View>
-
-                <View style={styles.button2}>
-                    <TouchableOpacity style={styles.buttonicon} onPress={() => Alert.alert('รอ Update')}  >
-                        <Image source = {require('../imge/homepage/icon3.png')} style={styles.imageicon}/>
-                    </TouchableOpacity>
-                </View>
-
+            <View style={styles.button}>
+                <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Profile')}  >
+                    <Image source={require('../imge/homepage/icon1.png')} style={styles.imageicon} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('selecisopod')} >
+                    <Image source={require('../imge/homepage/icon2.png')} style={styles.imageicon} />
+                </TouchableOpacity>
             </View>
+
+            <View style={styles.button2}>
+                <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Isocare')}  >
+                    <Image source={require('../imge/homepage/icon3.png')} style={styles.imageicon} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Monitor')} >
+                    <Image source={require('../imge/homepage/icon4.png')} style={styles.imageicon} />
+                </TouchableOpacity>
+            </View>
+
+        </View>
 
     )
 }
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
     },
     button2: {
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         marginTop: 15
     },
     buttonicon: {

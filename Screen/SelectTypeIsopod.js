@@ -56,7 +56,7 @@ export function selecisopod({ navigation }) {
             <View style={styles.buttonfix}>
 
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Homepage')}>
-                    <Text style={{ color: '#000000', fontSize: 15, textAlign: 'center', top: 5 }}> Back </Text>
+                    <Text style={{ color: '#000000', fontSize: 15, textAlign: 'center', top: 3 }}> Back </Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -86,6 +86,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         margin: 10,
         marginTop: 55
+    },
+    buttonfix: {
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
 });
 

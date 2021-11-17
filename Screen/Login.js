@@ -19,7 +19,7 @@ export function Login({ navigation }) {
                 <Text style={styles.text}> Password : </Text>
                 <TextInput
                     style={styles.input}
-                    keyboardType='numeric'
+                    keyboardType='number-pad'
                     placeholder='Enter Password'
                 />
             </View>

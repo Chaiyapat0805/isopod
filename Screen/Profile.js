@@ -1,42 +1,51 @@
-import React, { Component } from 'react';
-import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert} from "react-native";
+import React, { useEffect } from 'react';
+import { Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert } from "react-native";
 
 export function Profile({ navigation }) {
 
-    return(
 
-            <View style={styles.container}>
+    return (
 
-                <Text style={styles.text}> PROFILE </Text>
+        <View style={styles.container}>
 
-                <Image source = {require('../imge/Test/arum.png')} style={styles.imagebg}/>
+            <Text style={styles.text}> PROFILE </Text>
 
-                <View style={styles.icon}>
+            <Image source={require('../imge/Test/arum.png')} style={styles.imagebg} />
 
-                    <Text style={styles.texticon}> <Image source = {require('../imge/profile/iconpro.png')} 
-                    style={styles.imageic}/> Name : </Text>
-                    
-                    <Text style={styles.texticon}> <Image source = {require('../imge/profile/iconsex.png')} 
-                    style={styles.imageic}/> Sex : </Text>
+            <View style={styles.icon}>
 
-                    <Text style={styles.texticon}> <Image source = {require('../imge/profile/iconloca.png')} 
-                    style={styles.imageic}/> Location : </Text>
+                <Text style={styles.texticon}> <Image source={require('../imge/profile/iconpro.png')}
+                    style={styles.imageic} /> Name </Text>
 
-                    <Text style={styles.texticon}> <Image source = {require('../imge/profile/icontel.png')} 
-                    style={styles.imageic}/> Tel : </Text>
+                <Text style={styles.texticon}> <Image source={require('../imge/profile/iconsex.png')}
+                    style={styles.imageic} /> Gender  </Text>
 
-                </View>
+                <Text style={styles.texticon}> <Image source={require('../imge/profile/iconloca.png')}
+                    style={styles.imageic} /> Location  </Text>
 
-                <View style={styles.button}>
-
-                    <TouchableOpacity style={styles.buttonP} onPress={() => navigation.navigate('Homepage')} >
-                        <Text style={styles.textbt}> Close </Text>
-                    </TouchableOpacity>
-
-                </View>
+                <Text style={styles.texticon}> <Image source={require('../imge/profile/icontel.png')}
+                    style={styles.imageic} /> Tel  </Text>
 
             </View>
-  
+
+            <View style={styles.buttonfix}>
+
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Homepage')}>
+                    <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> OK </Text>
+                </TouchableOpacity>
+
+            </View>
+
+            <View style={styles.buttonfixed}>
+
+                <TouchableOpacity style={styles.buttoned} onPress={() => navigation.navigate('EditProfile')}>
+                    <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> EditProfile </Text>
+                </TouchableOpacity>
+
+            </View>
+
+        </View>
+
     )
 }
 
@@ -58,7 +67,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         left: 120
     },
-    imageic:{
+    imageic: {
         width: 35,
         height: 35,
         left: 35
@@ -75,9 +84,9 @@ const styles = StyleSheet.create({
         textAlign: 'left',
     },
     textbt: {
-        fontSize: 15,
+        fontSize: 13,
         textAlign: "center",
-        top: 8.5
+        top: 1.5
     },
     button: {
         flexDirection: 'row',
@@ -87,8 +96,30 @@ const styles = StyleSheet.create({
     buttonP: {
         backgroundColor: '#fff',
         borderRadius: 15,
-        width: 100,
-        height: 40
+        width: 52,
+        height: 25,
+    },
+    buttonfix: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        top: 50
+    },
+    button: {
+        backgroundColor: '#fff',
+        borderRadius: 20,
+        width: 60,
+        height: 25,
+    },
+    buttonfixed: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        bottom: 45
+    },
+    buttoned: {
+        backgroundColor: '#fff',
+        borderRadius: 20,
+        width: 85,
+        height: 25,
     },
 
 });
