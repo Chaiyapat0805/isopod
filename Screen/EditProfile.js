@@ -1,8 +1,19 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TextInput, View, TouchableOpacity, Alert } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
+import ImagePicker from 'react-native-image-crop-picker';
 
 export function EditProfile({ navigation }) {
+
+    function goToPicker() {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true,
+        }).then(image => {
+            console.log('image console ==>', image);
+        })
+    }
 
     return (
 
@@ -11,7 +22,7 @@ export function EditProfile({ navigation }) {
             <Text style={styles.text}> PROFILE </Text>
 
             <View style={styles.btnadd}>
-                <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('gallerysocare')}>
+                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={40} />

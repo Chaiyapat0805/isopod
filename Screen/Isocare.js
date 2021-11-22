@@ -3,6 +3,7 @@ import { StyleSheet, Text, Image, View, TouchableOpacity, Alert } from "react-na
 import Icon from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 
+
 export function Isocare({ navigation }) {
 
     return (

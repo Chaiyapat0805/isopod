@@ -63,7 +63,6 @@ export function Isobox1({ navigation }) {
                                 color: (opacity = 1) => `rgba(65, 131, 215, 1${opacity})`,
                                 strokeWidth: 2
                             },
-
                         ],
                         legend: ['Temp', 'Hum'],
                     }}

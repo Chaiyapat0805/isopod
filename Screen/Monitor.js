@@ -1,8 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, Alert } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
+import ImagePicker from 'react-native-image-crop-picker';
 
 export function Monitor({ navigation }) {
+
+    function goToPicker() {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true,
+        }).then(image => {
+            console.log('image console ==>', image);
+        })
+    }
 
     return (
 
@@ -11,7 +22,7 @@ export function Monitor({ navigation }) {
             <Text style={styles.text}> MONITOR </Text>
 
             <View style={styles.btnadd}>
-                <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('gallerys')}>
+                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={40} />
@@ -22,7 +33,7 @@ export function Monitor({ navigation }) {
                     Name </Text>
                 <TextInput
                     style={styles.input}
-                   // placeholder='Enter Name'
+                // placeholder='Enter Name'
                 />
             </View>
             <View style={styles.inputSize}>
@@ -31,7 +42,7 @@ export function Monitor({ navigation }) {
                 <TextInput
                     style={styles.input}
                     keyboardType='numeric'
-                    //placeholder='Enter Size'
+                //placeholder='Enter Size'
                 />
             </View>
             <View style={styles.inputAge}>
@@ -40,7 +51,7 @@ export function Monitor({ navigation }) {
                 <TextInput
                     style={styles.input}
                     keyboardType='numeric'
-                   // placeholder='Enter Age'
+                // placeholder='Enter Age'
                 />
             </View>
             <View style={styles.inputDetail}>
@@ -48,7 +59,7 @@ export function Monitor({ navigation }) {
                     Other </Text>
                 <TextInput
                     style={styles.input}
-                    //placeholder='Enter Detail'
+                //placeholder='Enter Detail'
                 />
             </View>
 

@@ -1,9 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, Image, View, TouchableOpacity, Alert } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
+import ImagePicker from 'react-native-image-crop-picker';
 
 
 export function Isocare2({ navigation }) {
+
+    function goToPicker() {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true,
+        }).then(image => {
+            console.log('image console ==>', image);
+        })
+    }
+
     return (
 
         <View style={styles.container}>
@@ -99,21 +111,21 @@ export function Isocare2({ navigation }) {
                 </View>
             </View>
             <View style={styles.btnadd}>
-                <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('gallerysocare')}>
+                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={35} />
                 </TouchableOpacity>
             </View>
             <View style={styles.btnadd2}>
-                <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('gallerysocare')}>
+                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={35} />
                 </TouchableOpacity>
             </View>
             <View style={styles.btnadd3}>
-                <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('gallerysocare')}>
+                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={35} />

@@ -71,7 +71,7 @@ function HomeScreen() {
 
         <HS.Screen name="gallerys" component={gallerys} />
 
-        <HS.Screen name="gallerysocare" component={gallerysocare} />
+        {/* <HS.Screen name="gallerysocare" component={gallerysocare} /> */}
 
         <HS.Screen name="EditProfile" component={EditProfile} options={{ headerShown: false }} />
 
