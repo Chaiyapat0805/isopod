@@ -3,6 +3,48 @@ import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, Touc
 
 export function Login({ navigation }) {
 
+
+    const [login, setlogin] = React.useState(0);
+    const [username, setusername] = React.useState('');
+    const [password, setpassword] = React.useState('');
+
+    const getlogin = async () => {
+
+        if (username == '' & password == '') {
+            return alert('Please write your username & password.')
+        }
+        else {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify(
+                {
+                    "username": username,
+                    "password": password,
+                }
+            )
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            const response = await fetch(`http://203.154.83.69/Check/Login`, requestOptions)
+            const result = await response.json();
+            console.log(result)
+            if (result.ret == 0) {
+                console.log(result.msg);
+                navigation.navigate('Homepage')
+            }
+            else {
+                console.log('error')
+                alert('Login Failed');
+            }
+
+        }
+    }
+
     return (
 
         <ImageBackground source={require('../imge/background.png')} style={styles.imagebg}>
@@ -13,12 +55,16 @@ export function Login({ navigation }) {
                 <Text style={styles.text}> Username : </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setusername}
+                    value={username}
                     placeholder='Enter Username'
                 />
 
                 <Text style={styles.text}> Password : </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setpassword}
+                    value={password}
                     keyboardType='number-pad'
                     placeholder='Enter Password'
                 />
@@ -28,7 +74,7 @@ export function Login({ navigation }) {
                 <TouchableOpacity style={styles.buttonRt} onPress={() => navigation.navigate('Register')} >
                     <Text style={styles.textbt}> Register </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonLi} onPress={() => navigation.navigate('Homepage')} >
+                <TouchableOpacity style={styles.buttonLi} onPress={() => getlogin()} >
                     <Text style={styles.textbt}> Log in </Text>
                 </TouchableOpacity>
             </View>

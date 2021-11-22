@@ -19,8 +19,8 @@ import Isocare2 from './Screen/Isocare2';
 import Isobox1 from './Screen/Isobox1';
 import Isobox2 from './Screen/Isobox2';
 import Isobox3 from './Screen/Isobox3';
-import gallerys from './Screen/gallerys';
-import gallerysocare from './Screen/gallerysocare';
+// import gallerys from './Screen/gallerys';
+// import gallerysocare from './Screen/gallerysocare';
 import EditProfile from './Screen/EditProfile';
 import Monitor2 from './Screen/Monitor2';
 import { Monitorchart } from './Screen/Monitorchart';
@@ -69,7 +69,7 @@ function HomeScreen() {
 
         <HS.Screen name="Isobox3" component={Isobox3} options={{ headerShown: false }} />
 
-        <HS.Screen name="gallerys" component={gallerys} />
+        {/* <HS.Screen name="gallerys" component={gallerys} /> */}
 
         {/* <HS.Screen name="gallerysocare" component={gallerysocare} /> */}
 

@@ -1,7 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert } from "react-native";
 
 export function Register({ navigation }) {
+
+    const [username, setusername] = React.useState('');
+    const [password, setpassword] = React.useState('');
+    const [name, setname] = React.useState('');
+    const [email, setemail] = React.useState('');
+    const [phone, setphone] = React.useState('');
+
+
+    const getsignup = async () => {
+
+        if (password == '') {
+            return alert('Please write your password.')
+        }
+        else {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+
+            var raw = JSON.stringify(
+                {
+                    "username": username,
+                    "password": password,
+                    "name": name,
+                    "email": email,
+                    "phone": phone
+                }
+            )
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            const response = await fetch(`http://203.154.83.69/Create/Register `, requestOptions)
+            const result = await response.json();
+            console.log(result)
+
+            if (result.password == null & result.password == '') {
+                alert('Please write password!!...')
+            }
+            else {
+                Alert.alert('สมัครสมาชิก สำเร็จ');
+            }
+        }
+    }
 
     return (
         <ImageBackground source={require('../imge/background.png')} style={styles.imagebg}>
@@ -12,12 +57,16 @@ export function Register({ navigation }) {
                 <Text style={styles.text}> Username :</Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setusername}
+                    value={username}
                     placeholder='Enter Username'
                 />
 
                 <Text style={styles.text}> Password : </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setpassword}
+                    value={password}
                     keyboardType='number-pad'
                     placeholder='Enter Password'
                 />
@@ -25,12 +74,16 @@ export function Register({ navigation }) {
                 <Text style={styles.text}> YourName : </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setname}
+                    value={name}
                     placeholder='Enter YourName'
                 />
 
                 <Text style={styles.text}> Email : </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setemail}
+                    value={email}
                     keyboardType='email-address'
                     placeholder='Enter Email'
                 />
@@ -38,6 +91,8 @@ export function Register({ navigation }) {
                 <Text style={styles.text}> Phone number : </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setphone}
+                    value={phone}
                     keyboardType='numeric'
                     placeholder='Enter Phone number'
                 />
@@ -45,7 +100,7 @@ export function Register({ navigation }) {
             </View>
 
             <View style={styles.button}>
-                <TouchableOpacity style={styles.buttonRt} onPress={() => Alert.alert('สมัครสมาชิก สำเร็จ')} >
+                <TouchableOpacity style={styles.buttonRt} onPress={() => getsignup()} >
                     <Text style={styles.textbt}> Sign Up </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonLi} onPress={() => navigation.navigate('HOME')} >
