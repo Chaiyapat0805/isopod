@@ -69,6 +69,8 @@ export function Register({ navigation }) {
                     style={styles.input}
                     onChangeText={setpassword}
                     value={password}
+                    // underlineColorAndroid="transparent"
+                    secureTextEntry={true}
                     keyboardType='number-pad'
                     placeholder='Enter Password'
                 />

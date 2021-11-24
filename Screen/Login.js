@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert } from "react-native";
+import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert, PasswordInputText } from "react-native";
 
 export function Login({ navigation }) {
 
     const [username, setusername] = React.useState('');
     const [password, setpassword] = React.useState('');
+
 
     const getlogin = async () => {
 
@@ -63,6 +64,8 @@ export function Login({ navigation }) {
                     style={styles.input}
                     onChangeText={setpassword}
                     value={password}
+                    // underlineColorAndroid="transparent"
+                    secureTextEntry={true}
                     keyboardType='number-pad'
                     placeholder='Enter Password'
                 />
