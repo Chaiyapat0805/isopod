@@ -15,6 +15,59 @@ export function Monitor({ navigation }) {
         })
     }
 
+    const [name, setname] = React.useState('');
+    const [size, setsize] = React.useState('');
+    const [age, setage] = React.useState('');
+    const [detail, setdetail] = React.useState('');
+
+    const [Namepic, setNamepic] = React.useState('');
+
+    const getmonitor = async () => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(
+            {
+                "Name": name,
+                "Size": size,
+                "Age": age,
+                "Detail": detail
+            }
+        )
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+        const response = await fetch(`http://203.154.83.69/Create/Monitor `, requestOptions)
+        const result = await response.json();
+        console.log(result)
+
+    }
+
+    const getImage = async () => {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(
+            {
+                "Namepic": Namepic
+            }
+        )
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+        const response = await fetch(`http://203.154.83.69/Create/Inputimges`, requestOptions)
+        const result = await response.json();
+        console.log(result)
+
+    }
+
     return (
 
         <View style={styles.container}>
@@ -22,7 +75,7 @@ export function Monitor({ navigation }) {
             <Text style={styles.text}> MONITOR </Text>
 
             <View style={styles.btnadd}>
-                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
+                <TouchableOpacity style={styles.add} onPress={() => goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={40} />
@@ -33,6 +86,8 @@ export function Monitor({ navigation }) {
                     Name </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setname}
+                    value={name}
                 // placeholder='Enter Name'
                 />
             </View>
@@ -41,6 +96,8 @@ export function Monitor({ navigation }) {
                     Size : cm </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setsize}
+                    value={size}
                     keyboardType='numeric'
                 //placeholder='Enter Size'
                 />
@@ -50,6 +107,8 @@ export function Monitor({ navigation }) {
                     Age </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setage}
+                    value={age}
                     keyboardType='numeric'
                 // placeholder='Enter Age'
                 />
@@ -59,14 +118,24 @@ export function Monitor({ navigation }) {
                     Other </Text>
                 <TextInput
                     style={styles.input}
+                    onChangeText={setdetail}
+                    value={detail}
                 //placeholder='Enter Detail'
                 />
             </View>
 
             <View style={styles.buttonfix}>
 
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Monitor2')}>
+                <TouchableOpacity style={styles.button}
+                    onChangeText={setNamepic}
+                    value={Namepic}
+                    onPress={() => getmonitor(), () => getImage()}>
+
                     <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> Save </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('Monitor2')}>
+                    <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> Next </Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -89,6 +158,14 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         width: 48,
         height: 26,
+        right: 40
+    },
+    button2: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 20,
+        width: 48,
+        height: 26,
+        left: 40
     },
     buttonfix: {
         flexDirection: 'row',

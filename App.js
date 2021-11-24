@@ -21,9 +21,12 @@ import Isobox2 from './Screen/Isobox2';
 import Isobox3 from './Screen/Isobox3';
 // import gallerys from './Screen/gallerys';
 // import gallerysocare from './Screen/gallerysocare';
-import EditProfile from './Screen/EditProfile';
+// import EditProfile from './Screen/EditProfile';
 import Monitor2 from './Screen/Monitor2';
-import { Monitorchart } from './Screen/Monitorchart';
+import Chartpandaking from './Screen/Chartpandaking';
+import Chartamber from './Screen/Chartamber';
+import Monitorpada from './Screen/Monitorpada';
+import Monitoramber from './Screen/Monitoramber';
 
 const HS = createStackNavigator();
 
@@ -73,11 +76,17 @@ function HomeScreen() {
 
         {/* <HS.Screen name="gallerysocare" component={gallerysocare} /> */}
 
-        <HS.Screen name="EditProfile" component={EditProfile} options={{ headerShown: false }} />
+        {/* <HS.Screen name="EditProfile" component={EditProfile} options={{ headerShown: false }} /> */}
 
         <HS.Screen name="Monitor2" component={Monitor2} options={{ headerShown: false }} />
 
-        <HS.Screen name="Monitorchart" component={Monitorchart} options={{ headerShown: false }} />
+        <HS.Screen name="Chartpandaking" component={Chartpandaking} options={{ headerShown: false }} />
+
+        <HS.Screen name="Chartamber" component={Chartamber} options={{ headerShown: false }} />
+
+        <HS.Screen name="Monitorpanda" component={Monitorpada} options={{ headerShown: false }} />
+
+        <HS.Screen name="Monitoramber" component={Monitoramber} options={{ headerShown: false }} />
 
       </HS.Navigator>
 

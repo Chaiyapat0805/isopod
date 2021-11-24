@@ -9,20 +9,17 @@ import {
     StackedBarChart
 } from "react-native-chart-kit";
 
-export function Monitorchart({ navigation }) {
+export function Chartamber({ navigation }) {
 
     return (
 
         <View style={styles.container}>
 
-
-            <ScrollView>
-
                 <Text style={styles.text}> MONITOR </Text>
 
-                <Image source={require('../imge/IsopodTypeimg/6.png')} style={styles.imageicon} />
+                <Image source={require('../imge/IsopodTypeimg/5.png')} style={styles.imageicon} />
                 <View style={styles.bname}>
-                    <Text style={styles.textb}> Cubaris sp. "Panda King" </Text>
+                    <Text style={styles.textb}> Cubaris sp. "Amber" </Text>
                 </View>
 
                 <View>
@@ -66,11 +63,7 @@ export function Monitorchart({ navigation }) {
                     />
                 </View>
 
-                <Image source={require('../imge/IsopodTypeimg/5.png')} style={styles.imageicon2} />
-                <View style={styles.bname2}>
-                    <Text style={styles.textb}> Cubaris sp. "Amber" </Text>
-                </View>
-
+                <Text style={styles.col}>Color Chart</Text>
                 <View>
                     <BarChart
                         data={{
@@ -78,12 +71,12 @@ export function Monitorchart({ navigation }) {
                             datasets: [
                                 {
                                     data: [
-                                        Math.random() * 3,
-                                        Math.random() * 3,
-                                        Math.random() * 3,
-                                        Math.random() * 3,
-                                        Math.random() * 3,
-                                        Math.random() * 3
+                                        Math.random() * 5,
+                                        Math.random() * 5,
+                                        Math.random() * 5,
+                                        Math.random() * 5,
+                                        Math.random() * 5,
+                                        Math.random() * 5
                                     ],
                                     color: (opacity = 1) => `rgba(0, 181, 201, 1${opacity})`,
                                     strokeWidth: 2
@@ -105,16 +98,13 @@ export function Monitorchart({ navigation }) {
                         }}
                         bezier
                         style={{
-                            // marginVertical: 1,
+                            marginVertical: 30,
                             borderRadius: 8,
-                            alignSelf: 'center',
-                            bottom: 10
+                            alignSelf: 'center'
                         }}
                     />
                 </View>
 
-
-            </ScrollView>
 
         </View>
 
@@ -173,6 +163,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 2
     },
+    col: {
+        fontSize: 20,
+        alignSelf: 'center'
+    }
 });
 
-export default Monitorchart;
+export default Chartamber;

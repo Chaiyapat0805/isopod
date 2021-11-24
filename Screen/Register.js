@@ -6,6 +6,7 @@ export function Register({ navigation }) {
     const [username, setusername] = React.useState('');
     const [password, setpassword] = React.useState('');
     const [name, setname] = React.useState('');
+    const [gender, setgender] = React.useState('');
     const [email, setemail] = React.useState('');
     const [phone, setphone] = React.useState('');
 
@@ -25,6 +26,7 @@ export function Register({ navigation }) {
                     "username": username,
                     "password": password,
                     "name": name,
+                    "gender": gender,
                     "email": email,
                     "phone": phone
                 }
@@ -71,12 +73,20 @@ export function Register({ navigation }) {
                     placeholder='Enter Password'
                 />
 
-                <Text style={styles.text}> YourName : </Text>
+                <Text style={styles.text}> Yourname : </Text>
                 <TextInput
                     style={styles.input}
                     onChangeText={setname}
                     value={name}
-                    placeholder='Enter YourName'
+                    placeholder='Enter Yourname'
+                />
+
+                <Text style={styles.text}> Gender : </Text>
+                <TextInput
+                    style={styles.input}
+                    onChangeText={setgender}
+                    value={gender}
+                    placeholder='Enter Gender'
                 />
 
                 <Text style={styles.text}> Email : </Text>
@@ -154,7 +164,7 @@ const styles = StyleSheet.create({
     button: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        top: -40,
+        top: -60,
         margin: 40,
         marginTop: 5
     },

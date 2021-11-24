@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, Image, View, TouchableOpacity, Alert, Dimensions } from "react-native";
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {
@@ -11,6 +11,78 @@ import {
 } from "react-native-chart-kit";
 
 export function Isobox2({ navigation }) {
+
+
+    const [dataChart, setDataChart] = useState([0])
+    const [dataChart2, setDataChart2] = useState("")
+
+    const [dataChart3, setDataChart3] = useState([0])
+    const [dataChart4, setDataChart4] = useState("")
+    useEffect(() => {
+        getApiData();
+        getApiData2();
+        const dataInterval = setInterval(() => getApiData(), 6 * 1000);
+        const dataInterval2 = setInterval(() => getApiData2(), 6 * 1000);
+        return () => { clearInterval(dataInterval), clearInterval(dataInterval2) };
+    }, [])
+    const getApiData = async () => {
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        const response = await fetch(`http://203.154.83.69/Show/DataT`, requestOptions)
+        const result = await response.json()
+
+        for (var i = 10; i < 20; i++) {
+            var convert_data = parseInt(result[i].Temperature)
+            setDataChart2(result[i].Temperature)
+            console.log("temp : ", convert_data)
+            //console.log(typeof (convert_data))
+            setDataChart(dataChart => [...dataChart, convert_data])
+        }
+
+    }
+    const getApiData2 = async () => {
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        const response = await fetch(`http://203.154.83.69/Show/DataH`, requestOptions)
+        const result = await response.json()
+
+        for (var i = 0; i < 10; i++) {
+            var convert_data = parseInt(result[i].Humidity)
+            setDataChart4(result[i].Humidity)
+            console.log("hum", convert_data)
+            //console.log(typeof (convert_data))
+            setDataChart3(dataChart3 => [...dataChart3, convert_data])
+        }
+
+    }
+
+
+    const check = () => {
+        console.log("length:", dataChart.length);
+        var lengthApiData = dataChart.length;
+        if (lengthApiData > 7) {
+            dataChart.splice(0, 1);
+            setDataChart([0]);
+            setDataChart2('');
+            setDataChart3([0]);
+            setDataChart4('');
+            console.log("chart splice: ", dataChart);
+            return;
+        }
+        else {
+            console.log('stack not full');
+            return;
+        }
+    }
+    check();
 
     return (
 
@@ -39,28 +111,12 @@ export function Isobox2({ navigation }) {
                         labels: ['Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat', 'Sun'],
                         datasets: [
                             {
-                                data: [
-                                    Math.random() * 28,
-                                    Math.random() * 28,
-                                    Math.random() * 28,
-                                    Math.random() * 28,
-                                    Math.random() * 28,
-                                    Math.random() * 28,
-                                    Math.random() * 28
-                                ],
+                                data: dataChart,
                                 color: (opacity = 1) => `rgba(0, 181, 201, 1${opacity})`,
                                 strokeWidth: 2
                             },
                             {
-                                data: [
-                                    Math.random() * 55,
-                                    Math.random() * 55,
-                                    Math.random() * 55,
-                                    Math.random() * 55,
-                                    Math.random() * 55,
-                                    Math.random() * 55,
-                                    Math.random() * 55
-                                ],
+                                data: dataChart3,
                                 color: (opacity = 1) => `rgba(65, 131, 215, 1${opacity})`,
                                 strokeWidth: 2
                             },
@@ -89,7 +145,7 @@ export function Isobox2({ navigation }) {
             </View>
 
             <View style={styles.icot}>
-                <Text style={styles.temp}> 26 °C </Text>
+                <Text style={styles.temp}> {dataChart2} °C </Text>
                 <AntDesign
                     name='loading1'
                     size={90}
@@ -97,7 +153,7 @@ export function Isobox2({ navigation }) {
                 />
             </View>
             <View style={styles.icoh}>
-                <Text style={styles.hum}> 53 % </Text>
+                <Text style={styles.hum}> {dataChart4} % </Text>
                 <AntDesign
                     name='loading1'
                     size={90}

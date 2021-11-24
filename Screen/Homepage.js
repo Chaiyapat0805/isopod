@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
 
-export function Homepage({ navigation }) {
+export function Homepage({route, navigation }) {
 
+    // const username = route.params.username;
     return (
 
         <View style={styles.container}>
@@ -12,7 +13,7 @@ export function Homepage({ navigation }) {
             <Image source={require('../imge/homepage/isopodhp.png')} style={styles.imagebg} />
 
             <View style={styles.button}>
-                <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Profile')}  >
+                <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Profile')}>
                     <Image source={require('../imge/homepage/icon1.png')} style={styles.imageicon} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('selecisopod')} >

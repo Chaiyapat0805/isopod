@@ -1,8 +1,59 @@
 import React, { useEffect } from 'react';
-import { Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert } from "react-native";
+import { Image, StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Alert, } from "react-native";
 
 export function Profile({ navigation }) {
 
+    const [name, setname] = React.useState(0);
+    const [gender, setgender] = React.useState(0);
+    const [email, setemail] = React.useState(0);
+    const [phone, setphone] = React.useState(0);
+    // const username = route.params.username;
+    const [Namepic, setNamepic] = React.useState(0);
+
+    const getprofile = async () => {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        const response = await fetch(`http://203.154.83.69/Show/Register `, requestOptions)
+        const result = await response.json();
+        console.log(result[0].name)
+        setname(result[0].name)
+        setgender(result[0].gender)
+        setemail(result[0].email)
+        setphone(result[0].phone)
+
+    }
+
+    const getImage = async () => {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+        const response = await fetch(`http://203.154.83.69/Show/Image `, requestOptions)
+        const result = await response.json();
+        console.log(result[2].Namepic)
+        setNamepic(result[2].Namepic)
+
+
+    }
+
+    useEffect(() => {
+        getprofile();
+        getImage();
+    })
 
     return (
 
@@ -10,21 +61,21 @@ export function Profile({ navigation }) {
 
             <Text style={styles.text}> PROFILE </Text>
 
-            <Image source={require('../imge/Test/arum.png')} style={styles.imagebg} />
+            <Image source={require('../imge/Test/arum.png')}style={styles.imagebg} />
 
             <View style={styles.icon}>
 
                 <Text style={styles.texticon}> <Image source={require('../imge/profile/iconpro.png')}
-                    style={styles.imageic} /> Name </Text>
+                    style={styles.imageic} /> Name : {name}</Text>
 
                 <Text style={styles.texticon}> <Image source={require('../imge/profile/iconsex.png')}
-                    style={styles.imageic} /> Gender  </Text>
+                    style={styles.imageic} /> Gender : {gender} </Text>
 
-                <Text style={styles.texticon}> <Image source={require('../imge/profile/iconloca.png')}
-                    style={styles.imageic} /> Location  </Text>
+                <Text style={styles.texticon}> <Image source={require('../imge/profile/iconemail.png')}
+                    style={styles.imageic} /> Email :  {email}</Text>
 
                 <Text style={styles.texticon}> <Image source={require('../imge/profile/icontel.png')}
-                    style={styles.imageic} /> Tel  </Text>
+                    style={styles.imageic} /> Tel : {phone} </Text>
 
             </View>
 
@@ -36,13 +87,14 @@ export function Profile({ navigation }) {
 
             </View>
 
-            <View style={styles.buttonfixed}>
+            {/* 
+                <View style={styles.buttonfixed}>
 
-                <TouchableOpacity style={styles.buttoned} onPress={() => navigation.navigate('EditProfile')}>
-                    <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> EditProfile </Text>
-                </TouchableOpacity>
+                    <TouchableOpacity style={styles.buttoned} onPress={() => navigation.navigate('EditProfile')}>
+                        <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> EditProfile </Text>
+                    </TouchableOpacity>
 
-            </View>
+                </View> */}
 
         </View>
 
@@ -110,17 +162,17 @@ const styles = StyleSheet.create({
         width: 60,
         height: 25,
     },
-    buttonfixed: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        bottom: 45
-    },
-    buttoned: {
-        backgroundColor: '#fff',
-        borderRadius: 20,
-        width: 85,
-        height: 25,
-    },
+    // buttonfixed: {
+    //     flexDirection: 'row',
+    //     justifyContent: 'center',
+    //     bottom: 45
+    // },
+    // buttoned: {
+    //     backgroundColor: '#fff',
+    //     borderRadius: 20,
+    //     width: 85,
+    //     height: 25,
+    // },
 
 });
 

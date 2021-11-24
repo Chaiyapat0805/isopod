@@ -3,8 +3,6 @@ import { ImageBackground, Image, StyleSheet, Text, TextInput, Button, View, Touc
 
 export function Login({ navigation }) {
 
-
-    const [login, setlogin] = React.useState(0);
     const [username, setusername] = React.useState('');
     const [password, setpassword] = React.useState('');
 

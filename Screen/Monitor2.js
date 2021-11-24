@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, Image, View, TouchableOpacity, Alert } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export function Monitor2({ navigation }) {
 
@@ -12,7 +13,9 @@ export function Monitor2({ navigation }) {
             <Text style={styles.text}> MONITOR </Text>
 
             <View style={styles.box1}>
+            <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Monitorpanda')}  >
                 <Image source={require('../imge/IsopodTypeimg/6.png')} style={styles.imageicon} />
+                </TouchableOpacity>
                 <View style={styles.bname}>
                     <Text style={styles.textb}> Cubaris sp. "Panda King" </Text>
                 </View>
@@ -25,8 +28,19 @@ export function Monitor2({ navigation }) {
                 />
             </TouchableOpacity>
 
+            <TouchableOpacity style={styles.btnch} onPress={() => navigation.navigate('Chartpandaking')}>
+                <Ionicons
+                    name='bar-chart-sharp'
+                    size={20}
+                />
+            </TouchableOpacity>
+
+
+
             <View style={styles.box2}>
+            <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Monitoramber')}  >
                 <Image source={require('../imge/IsopodTypeimg/5.png')} style={styles.imageicon} />
+                </TouchableOpacity>
                 <View style={styles.bname}>
                     <Text style={styles.textb}> Cubaris sp. "Amber" </Text>
                 </View>
@@ -39,6 +53,13 @@ export function Monitor2({ navigation }) {
                 />
             </TouchableOpacity>
 
+            <TouchableOpacity style={styles.btnch} onPress={() => navigation.navigate('Chartamber')}>
+                <Ionicons
+                    name='bar-chart-sharp'
+                    size={20}
+                />
+            </TouchableOpacity>
+
             <View style={styles.box3}>
                 <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('Monitor2')}>
                     <Icon
@@ -47,13 +68,6 @@ export function Monitor2({ navigation }) {
                 </TouchableOpacity>
             </View>
 
-
-            <View style={styles.buttonfix}>
-
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Monitorchart')}>
-                    <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 4 }}> Chart </Text>
-                </TouchableOpacity>
-            </View>
 
         </View>
 
@@ -119,22 +133,15 @@ const styles = StyleSheet.create({
         left: 145,
         bottom: 90
     },
+    btnch: {
+        alignSelf: 'center',
+        right: 145,
+        bottom: 115
+    },
     add: {
         alignItems: 'center',
         top: 38
     },
-    buttonfix: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        top: 145
-    },
-    button: {
-        backgroundColor: '#FFFFFF',
-        borderRadius: 20,
-        width: 55,
-        height: 30
-    },
-
 });
 
 export default Monitor2;

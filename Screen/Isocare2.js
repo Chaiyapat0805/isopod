@@ -16,6 +16,45 @@ export function Isocare2({ navigation }) {
         })
     }
 
+    const [Namebox, setNamebox] = React.useState('');
+    const [Typeisopod, setTypeisopod] = React.useState('');
+    const [Temperature, setTemperature] = React.useState('');
+    const [Humidity, setHumidity] = React.useState('');
+
+    const [Namebox2, setNamebox2] = React.useState('');
+    const [Typeisopod2, setTypeisopod2] = React.useState('');
+    const [Temperature2, setTemperature2] = React.useState('');
+    const [Humidity2, setHumidity2] = React.useState('');
+
+    const [Namebox3, setNamebox3] = React.useState('');
+    const [Typeisopod3, setTypeisopod3] = React.useState('');
+    const [Temperature3, setTemperature3] = React.useState('');
+    const [Humidity3, setHumidity3] = React.useState('');
+
+    const getbox1 = async () => {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(
+            {
+                "Namebox": Namebox,
+                "Typeisopod": Typeisopod,
+                "Temperature": Temperature,
+                "Humidity": Humidity
+            }
+        )
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+        const response = await fetch(`http://203.154.83.69/Create/Box `, requestOptions)
+        const result = await response.json();
+        console.log(result)
+    }
+
     return (
 
         <View style={styles.container}>
@@ -26,13 +65,16 @@ export function Isocare2({ navigation }) {
                 <View style={styles.inputname}>
                     <TextInput
                         style={styles.input}
-
+                        onChangeText={setNamebox}
+                        value={Namebox}
                     />
                 </View>
 
                 <View style={styles.inputype}>
                     <TextInput
                         style={styles.input}
+                        onChangeText={setTypeisopod}
+                        value={Typeisopod}
                     />
                 </View>
 
@@ -41,6 +83,8 @@ export function Isocare2({ navigation }) {
                 <View style={styles.inputemp}>
                     <TextInput
                         style={styles.input}
+                        onChangeText={setTemperature}
+                        value={Temperature}
                         keyboardType='numeric'
                     />
                 </View>
@@ -49,6 +93,8 @@ export function Isocare2({ navigation }) {
                 <View style={styles.inputhum}>
                     <TextInput
                         style={styles.input}
+                        onChangeText={setHumidity}
+                        value={Humidity}
                         keyboardType='numeric'
                     />
                 </View>
@@ -111,21 +157,21 @@ export function Isocare2({ navigation }) {
                 </View>
             </View>
             <View style={styles.btnadd}>
-                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
+                <TouchableOpacity style={styles.add} onPress={() => goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={35} />
                 </TouchableOpacity>
             </View>
             <View style={styles.btnadd2}>
-                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
+                <TouchableOpacity style={styles.add} onPress={() => goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={35} />
                 </TouchableOpacity>
             </View>
             <View style={styles.btnadd3}>
-                <TouchableOpacity style={styles.add} onPress={()=> goToPicker()}>
+                <TouchableOpacity style={styles.add} onPress={() => goToPicker()}>
                     <Icon
                         name='add-outline'
                         size={35} />
@@ -134,7 +180,7 @@ export function Isocare2({ navigation }) {
 
             <View style={styles.buttonfix}>
 
-                <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Save เรียบร้อย')}>
+                <TouchableOpacity style={styles.button} onPress={() => getbox1()}>
                     <Text style={{ color: '#000000', fontSize: 13, textAlign: 'center', top: 3 }}> Save </Text>
                 </TouchableOpacity>
             </View>
