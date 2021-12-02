@@ -35,7 +35,7 @@ export function Isobox1({ navigation }) {
         const response = await fetch(`http://203.154.83.69/Show/DataT`, requestOptions)
         const result = await response.json()
 
-        for(var i = 5 ; i < 10 ; i++){
+        for(var i = 550 ; i < 650 ; i++){
         var convert_data = parseInt(result[i].Temperature)
         setDataChart2(result[i].Temperature) 
         console.log("temp : ", convert_data)
@@ -54,7 +54,7 @@ export function Isobox1({ navigation }) {
         const response = await fetch(`http://203.154.83.69/Show/DataH`, requestOptions)
         const result = await response.json()
 
-        for(var i = 5 ; i < 10 ; i++){
+        for(var i = 10 ; i < 20 ; i++){
         var convert_data = parseInt(result[i].Humidity)
         setDataChart4(result[i].Humidity) 
         console.log("hum" ,convert_data)
@@ -68,7 +68,7 @@ export function Isobox1({ navigation }) {
     const check = () => {
         console.log("length:", dataChart.length);
         var lengthApiData = dataChart.length;
-        if (lengthApiData > 7) {
+        if (lengthApiData > 6) {
             dataChart.splice(0, 1);
             setDataChart([0]);
             setDataChart2(''); 
