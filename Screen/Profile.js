@@ -7,8 +7,6 @@ export function Profile({ navigation }) {
     const [gender, setgender] = React.useState(0);
     const [email, setemail] = React.useState(0);
     const [phone, setphone] = React.useState(0);
-    // const username = route.params.username;
-    const [Namepic, setNamepic] = React.useState(0);
 
     const getprofile = async () => {
 
@@ -25,34 +23,16 @@ export function Profile({ navigation }) {
         const response = await fetch(`http://203.154.83.69/Show/Register `, requestOptions)
         const result = await response.json();
         console.log(result[0].name)
-        setname(result[0].name)
-        setgender(result[0].gender)
-        setemail(result[0].email)
-        setphone(result[0].phone)
+        setname(result[3].name)
+        setgender(result[3].gender)
+        setemail(result[3].email)
+        setphone(result[3].phone)
 
     }
 
-    const getImage = async () => {
-
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-
-        var requestOptions = {
-            method: 'GET',
-            headers: myHeaders,
-            redirect: 'follow'
-        };
-        const response = await fetch(`http://203.154.83.69/Show/Image `, requestOptions)
-        const result = await response.json();
-        console.log(result[2].Namepic)
-        setNamepic(result[2].Namepic)
-
-
-    }
 
     useEffect(() => {
         getprofile();
-        getImage();
     })
 
     return (

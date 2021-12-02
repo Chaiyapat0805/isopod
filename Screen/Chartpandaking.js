@@ -38,8 +38,6 @@ export function Chartpandaking({ navigation }) {
                                         Math.random() * 3,
                                         Math.random() * 3
                                     ],
-                                    color: (opacity = 1) => `rgba(0, 181, 201, 1${opacity})`,
-                                    strokeWidth: 2
                                 },
                             ],
                             legend: ['Cm', 'Week'],
@@ -52,6 +50,7 @@ export function Chartpandaking({ navigation }) {
                             backgroundGradientTo: '#8B8682',
                             decimalPlaces: 2, // optional, defaults to 2dp
                             color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                            //labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
                             style: {
                                 borderRadius: 16
                             },
@@ -80,8 +79,8 @@ export function Chartpandaking({ navigation }) {
                                         Math.random() * 5,
                                         Math.random() * 5
                                     ],
-                                    color: (opacity = 1) => `rgba(255, 255, 255, 1${opacity})`,
-                                    strokeWidth: 2
+                                    // color: (opacity = 1) => `rgba(255, 255, 255, 1${opacity})`,
+                                    // strokeWidth: 2
                                 },
                             ],
                             legend: ['Cm', 'Week'],
@@ -93,7 +92,7 @@ export function Chartpandaking({ navigation }) {
                             backgroundGradientFrom: '#8B8682',
                             backgroundGradientTo: '#8B8682',
                             decimalPlaces: 2, // optional, defaults to 2dp
-                            color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                            color: (opacity = 1) => `rgba(255, 255, 155, ${opacity})`,
                             style: {
                                 borderRadius: 16
                             },

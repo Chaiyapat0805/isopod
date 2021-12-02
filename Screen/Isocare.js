@@ -1,10 +1,40 @@
-import React from 'react';
+import React ,{useEffect} from 'react';
 import { StyleSheet, Text, Image, View, TouchableOpacity, Alert } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 
 export function Isocare({ navigation }) {
+
+    const [Namebox, setNamebox] = React.useState(0);
+    const [Typeisopod, setTypeisopod] = React.useState(0);
+    const [Temperature, setTemperature] = React.useState(0);
+    const [Humidity, setHumidity] = React.useState(0);
+
+    const getsocare = async () => {
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+          };
+
+          const response = await fetch(`http://203.154.83.69/Show/IsopodBox `, requestOptions)
+          const result = await response.json();
+          console.log(result[11].Namebox)
+          setNamebox(result[11].Namebox)
+          setTypeisopod(result[11].Typeisopod)
+          setTemperature(result[11].Temperature)
+          setHumidity(result[11].Humidity)
+
+        }
+
+        useEffect(() => {
+            getsocare();
+        })
+    
 
     return (
 
@@ -14,8 +44,8 @@ export function Isocare({ navigation }) {
 
             <View style={styles.box1}>
 
-                <Text style={styles.textbox1}> ISOCARE BOX NO.01 </Text>
-                <Text style={styles.textbox1_1}>  Type: Cubaris </Text>
+                <Text style={styles.textbox1}> {Namebox} </Text>
+                <Text style={styles.textbox1_1}> Type: {Typeisopod}</Text>
                 <Text style={styles.textbox1_2}> suitable temperature & humidity  </Text>
 
                 <TouchableOpacity style={styles.buttonicon} onPress={() => navigation.navigate('Isobox1')}  >
@@ -23,9 +53,9 @@ export function Isocare({ navigation }) {
                 </TouchableOpacity>
 
                 <Image source={require('../imge/isocare/icontemp.png')} style={styles.imageicon2} />
-                <Text style={styles.texticon2}> 18-28 °C </Text>
+                <Text style={styles.texticon2}>  {Temperature} °C </Text>
                 <Image source={require('../imge/isocare/iconhum.png')} style={styles.imageicon3} />
-                <Text style={styles.texticon3}> 70-80 % </Text>
+                <Text style={styles.texticon3}> {Humidity}  % </Text>
 
             </View>
             <TouchableOpacity style={styles.btnadd1} onPress={() => navigation.navigate('Isocare2')}>
